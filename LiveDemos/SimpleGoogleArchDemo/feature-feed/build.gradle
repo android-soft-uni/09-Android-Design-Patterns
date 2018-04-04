@@ -1,0 +1,64 @@
+apply plugin: 'com.android.feature'
+
+android {
+
+    baseFeature true
+    compileSdkVersion rootProject.compileSdk
+    buildToolsVersion rootProject.buildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.compileSdk
+        versionCode rootProject.versionCode
+        versionName rootProject.versionName
+    }
+
+    // Switch between test types by swapping commented out state
+    testBuildType /* 'debug' */ 'minified'
+
+    buildTypes {
+        minified {
+            debuggable true
+            minifyEnabled true
+            signingConfig signingConfigs.debug
+        }
+        debug {}
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$support_lib_version"
+
+    // Firestore
+    implementation "com.google.firebase:firebase-firestore:$firebase_version"
+
+    // Other Firebase/Play services deps
+    implementation "com.google.firebase:firebase-auth:$firebase_version"
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+
+    // Android architecture components
+    implementation "android.arch.lifecycle:extensions:$arch_version"
+    implementation "com.android.support:support-v4:$support_lib_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    annotationProcessor "android.arch.lifecycle:compiler:$arch_version"
+
+    implementation "com.android.support:animated-vector-drawable:$support_lib_version"
+    implementation "com.android.support:cardview-v7:$support_lib_version"
+    implementation "com.android.support:customtabs:$support_lib_version"
+    implementation "com.android.support:design:$support_lib_version"
+    implementation "com.android.support:recyclerview-v7:$support_lib_version"
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/cc_red</color>
+    <color name="colorPrimaryDark">#FFC91D1E</color>
+    <color name="colorAccent">@color/cc_red</color>
+
+    <color name="cc_red">#FFEB2222</color>
+    <color name="pink">#45DF2E3A</color>
+    <color name="checked_item_color">#FFFFFF</color>
+    <color name="white">#fff</color>
+    <color name="unchecked_item_color">#57000000</color>
+    <color name="tab_text_color_inactive">#b4ffffff</color>
+    <color name="subtitle_text_color">#57000000</color>
+</resources>

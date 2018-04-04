@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_stories"
+        android:icon="@drawable/feed_1"
+        android:title="@string/stories" />
+
+    <item
+        android:id="@+id/item_scanner"
+        android:icon="@drawable/scanner_1"
+        android:title="@string/scanner" />
+
+    <item
+        android:id="@+id/item_gifts"
+        android:icon="@drawable/gifts_1"
+        android:title="@string/gifts" />
+
+    <item
+        android:id="@+id/item_profile"
+        android:icon="@drawable/profile_1"
+        android:title="@string/profile" />
+
+</menu>

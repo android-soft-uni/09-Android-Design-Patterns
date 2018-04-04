@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-200dp"
+        android:background="@drawable/bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ornament_top_large"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-100dp"
+            android:fontFamily="@font/you2013"
+            android:text="@string/thank_you"
+            android:textColor="@android:color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/you2013"
+            android:text="@string/for_being_santastic"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ornament_bottom_large"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/cola_logo_big"
+            tools:ignore="ContentDescription" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/gothambold"
+            android:text="@string/ok"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+</layout>
