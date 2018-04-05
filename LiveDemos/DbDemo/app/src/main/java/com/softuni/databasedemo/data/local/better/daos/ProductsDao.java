@@ -4,11 +4,12 @@ package com.softuni.databasedemo.data.local.better.daos;
 import android.content.Context;
 import android.database.Cursor;
 
+import com.softuni.databasedemo.data.local.better.ProductsRepository;
 import com.softuni.databasedemo.data.local.better.records.ProductRecord;
 
 import static com.softuni.databasedemo.data.local.better.DatabaseInitializer.CREATE_TABLE;
 
-public class ProductsDao extends BaseDao<ProductRecord> {
+public class ProductsDao extends BaseDao<ProductRecord> implements ProductsRepository {
     public static final String TABLE_NAME = "products";
 
     public static final String COLUMN_NAME = "NAME";
@@ -38,10 +39,12 @@ public class ProductsDao extends BaseDao<ProductRecord> {
         return new ProductRecord().fromCursor(cursor);
     }
 
+    @Override
     public ProductRecord findByType(String type) {
         return findByColumn(COLUMN_TYPE, type);
     }
 
+    @Override
     public ProductRecord insert(String name, String address, String type, String serialNumber) {
         ProductRecord record = new ProductRecord();
         record.setName(name);
@@ -53,6 +56,7 @@ public class ProductsDao extends BaseDao<ProductRecord> {
         return record;
     }
 
+    @Override
     public void updateProductRecord(ProductRecord record) {
         update(record);
     }

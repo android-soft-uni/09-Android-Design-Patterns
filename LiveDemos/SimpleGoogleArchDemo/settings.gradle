@@ -1,1 +1,0 @@
-include ':app', ':instantapp', ':feature-feed'

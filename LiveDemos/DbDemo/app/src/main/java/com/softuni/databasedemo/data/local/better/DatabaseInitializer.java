@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.softuni.databasedemo.data.local.better.daos.ProductsDao;
+import com.softuni.databasedemo.data.local.better.daos.UsersDao;
 
 public class DatabaseInitializer extends SQLiteOpenHelper {
 
@@ -56,6 +57,7 @@ public class DatabaseInitializer extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(ProductsDao.CREATE_TABLE_QUERY);
+        sqLiteDatabase.execSQL(UsersDao.CREATE_TABLE_QUERY);
     }
 
     @Override

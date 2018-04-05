@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="colorPrimary">@color/cc_red</color>
-    <color name="colorPrimaryDark">#FFBF2731</color>
-    <color name="colorAccent">@color/cc_red</color>
-    <color name="cc_red">#FFDF2E3A</color>
-</resources>

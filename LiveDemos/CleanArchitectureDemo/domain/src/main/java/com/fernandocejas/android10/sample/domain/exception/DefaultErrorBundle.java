@@ -20,11 +20,20 @@ package com.fernandocejas.android10.sample.domain.exception;
  */
 public class DefaultErrorBundle implements ErrorBundle {
 
+  private static DefaultErrorBundle instance;
+
+  public static DefaultErrorBundle getInstance(Exception exception) {
+    if(instance == null) {
+       instance = new DefaultErrorBundle(exception);
+    }
+      return instance;
+  }
+
   private static final String DEFAULT_ERROR_MSG = "Unknown error";
 
   private final Exception exception;
 
-  public DefaultErrorBundle(Exception exception) {
+  private DefaultErrorBundle(Exception exception) {
     this.exception = exception;
   }
 
